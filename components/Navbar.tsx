@@ -11,6 +11,7 @@ import {
   NavbarButton,
 } from "./ui/resizable-navbar";
 import Image from "next/image";
+import Link from "next/link";
 
 const navItems = [
   { name: "Home", link: "/" },
@@ -27,23 +28,25 @@ export default function Navbar() {
       {/* Desktop */}
       <NavBody className="card-glow bg-[hsl(var(--card))]/70 backdrop-blur-lg border border-[hsl(var(--border))]">
         {/* Logo */}
-        <div className="flex items-center space-x-3">
-          <Image
-            src="/imexa_Logo.png"
-            alt="ImeXa Logo"
-            width={100}
-            height={40}
-            className="object-contain drop-shadow-[0_0_12px_hsl(var(--primary-glow)/0.8)]"
-          />
-          <span className="text-neon font-semibold">By</span>
-          <Image
-            src="/guidona-logo.svg"
-            alt="Guidona Logo"
-            width={120}
-            height={40}
-            className="object-contain drop-shadow-[0_0_12px_hsl(var(--secondary-glow)/0.8)]"
-          />
-        </div>
+        <Link href="/">
+          <div className="flex items-center space-x-3">
+            <Image
+              src="/imexa_Logo.png"
+              alt="ImeXa Logo"
+              width={100}
+              height={40}
+              className="object-contain drop-shadow-[0_0_12px_hsl(var(--primary-glow)/0.8)]"
+            />
+            <span className="text-neon font-semibold">By</span>
+            <Image
+              src="/guidona-logo.svg"
+              alt="Guidona Logo"
+              width={120}
+              height={40}
+              className="object-contain drop-shadow-[0_0_12px_hsl(var(--secondary-glow)/0.8)]"
+            />
+          </div>
+        </Link>
 
         {/* Links */}
         <div className="flex gap-8 text-[hsl(var(--foreground))]/90 font-medium">
