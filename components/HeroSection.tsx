@@ -126,7 +126,7 @@ const HeroSection = () => {
         </div>
 
         {/* Phase 2 */}
-        {currentPhase === 2 && (
+        {/* {currentPhase === 2 && (
           <div className="mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 transform hover:scale-105 transition-all duration-300 text-glow">
               <span className="bg-gradient-to-r from-accent via-primary to-secondary bg-clip-text text-transparent">
@@ -150,7 +150,7 @@ const HeroSection = () => {
               </div>
             )}
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );
