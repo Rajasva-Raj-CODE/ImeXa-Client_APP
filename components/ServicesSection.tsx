@@ -113,53 +113,56 @@ const ServicesSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className={`card-glow card-hover interactive-card magnetic-hover p-8 rounded-xl relative overflow-hidden group ${
-                isVisible ? "animate-slide-up-stagger opacity-100" : "opacity-0"
-              }`}
-              style={{
-                animationDelay: `${index * 150}ms`,
-              }}
-            >
-              {/* Enhanced gradient background */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-10 rounded-xl group-hover:opacity-20 transition-opacity duration-500`}
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-xl"></div>
+        <div
+  key={index}
+  className={`card-glow card-hover interactive-card magnetic-hover p-8 rounded-xl relative overflow-hidden group ${
+    isVisible ? "animate-slide-up-stagger opacity-100" : "opacity-0"
+  }`}
+  style={{
+    animationDelay: `${index * 150}ms`,
+  }}
+>
+  {/* Gradient background (must ignore pointer events) */}
+  <div
+    className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-10 rounded-xl group-hover:opacity-20 transition-opacity duration-500 pointer-events-none`}
+  ></div>
+  <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-xl pointer-events-none"></div>
 
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-4 text-primary group-hover:text-primary-glow transition-colors duration-300">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
-                  {service.description}
-                </p>
+  {/* Content */}
+  <div className="relative z-10">
+    <h3 className="text-2xl font-bold mb-4 text-primary group-hover:text-primary-glow transition-colors duration-300">
+      {service.title}
+    </h3>
+    <p className="text-muted-foreground mb-6 leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+      {service.description}
+    </p>
 
-                <ul className="space-y-3 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="flex items-center text-sm group-hover:transform group-hover:translate-x-2 transition-transform duration-300"
-                      style={{ transitionDelay: `${featureIndex * 50}ms` }}
-                    >
-                      <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse-glow"></div>
-                      <span className="text-foreground/90 group-hover:text-foreground transition-colors duration-300">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+    <ul className="space-y-3 mb-6">
+      {service.features.map((feature, featureIndex) => (
+        <li
+          key={featureIndex}
+          className="flex items-center text-sm group-hover:translate-x-2 transition-transform duration-300"
+          style={{ transitionDelay: `${featureIndex * 50}ms` }}
+        >
+          <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse-glow"></div>
+          <span className="text-foreground/90 group-hover:text-foreground transition-colors duration-300">
+            {feature}
+          </span>
+        </li>
+      ))}
+    </ul>
 
-                <Button
-                  variant="minimal"
-                  size="sm"
-                  className="w-full magnetic-hover group-hover:scale-105 transition-transform duration-300"
-                >
-                  Learn More
-                </Button>
-              </div>
-            </div>
+    {/* Fix Learn More hover */}
+    <Button
+      variant="minimal"
+      size="sm"
+      className="w-full magnetic-hover transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_15px_hsl(var(--primary)/0.6)]"
+    >
+      Learn More
+    </Button>
+  </div>
+</div>
+
           ))}
         </div>
 
