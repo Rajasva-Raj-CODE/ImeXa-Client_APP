@@ -115,7 +115,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`card-glow interactive-card magnetic-hover p-8 rounded-xl relative overflow-hidden group ${
+              className={`card-glow card-hover interactive-card magnetic-hover p-8 rounded-xl relative overflow-hidden group ${
                 isVisible ? "animate-slide-up-stagger opacity-100" : "opacity-0"
               }`}
               style={{
