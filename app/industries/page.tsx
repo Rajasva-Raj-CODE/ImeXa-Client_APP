@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ArrowRight, Factory, Car, GraduationCap, Heart, Building, Wrench, Users, Globe } from 'lucide-react'
+import { ArrowRight, Factory, Car, GraduationCap, Heart, Building, Wrench, Users, Globe, Smartphone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -25,8 +25,8 @@ const industries = [
   {
     icon: Factory,
     title: 'Manufacturing Industry',
-    description: 'Assembly line training, safety protocols, equipment operation, and quality control processes',
-    features: ['Assembly Line Training', 'Safety Protocols', 'Equipment Operation', 'Quality Control'],
+    description: 'Immersive VR training that mirrors real factory conditions for assembly, quality checks, and emergency response in a risk-free, data-driven virtual platform.',
+    features: ['VR Digital Twins', 'Procedural Practice', 'Safety Drills', 'Competency Analytics'],
     image: 'https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg',
     href: '/industry/manufacturing',
     color: 'from-blue-500 to-cyan-500'
@@ -34,8 +34,8 @@ const industries = [
   {
     icon: Car,
     title: 'Automobile Industry',
-    description: 'Vehicle assembly training, maintenance procedures, diagnostic training, and customer service',
-    features: ['Vehicle Assembly', 'Maintenance Training', 'Diagnostic Procedures', 'Customer Service'],
+    description: 'VR and AR training modules that compress ramp-up time, improve first-time-right performance, and standardize skills across service centers and dealerships.',
+    features: ['Vehicle Assembly', 'Service Diagnostics', 'Sales Training', 'AR-Assisted Maintenance'],
     image: 'https://images.pexels.com/photos/279949/pexels-photo-279949.jpeg',
     href: '/industry/automobile',
     color: 'from-purple-500 to-pink-500'
@@ -43,56 +43,38 @@ const industries = [
   {
     icon: GraduationCap,
     title: 'Education VR Labs',
-    description: 'Virtual laboratories, immersive learning experiences, and hands-on skill development',
-    features: ['Virtual Labs', 'Immersive Learning', 'Skill Development', 'Interactive Modules'],
+    description: 'Turn complex concepts into interactive, curriculum-aligned simulations so students learn by doing. Expand access and deliver hands-on STEM learning.',
+    features: ['Virtual Science Labs', 'Immersive Learning', 'Real-time Feedback', 'LMS Integration'],
     image: 'https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg',
     href: '/industry/education',
     color: 'from-green-500 to-teal-500'
   },
   {
-    icon: Heart,
-    title: 'Healthcare Training',
-    description: 'Medical simulations, surgical training, patient care, and emergency response protocols',
-    features: ['Medical Simulations', 'Surgical Training', 'Patient Care', 'Emergency Response'],
-    image: 'https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg',
-    href: '/industry/healthcare',
-    color: 'from-red-500 to-orange-500'
-  },
-  {
     icon: Building,
-    title: 'Construction & Engineering',
-    description: 'Site safety training, heavy machinery operation, project management, and risk assessment',
-    features: ['Site Safety', 'Heavy Machinery', 'Project Management', 'Risk Assessment'],
+    title: 'Virtual Factory Tour',
+    description: 'Let employees, vendors, and auditors explore your facilities from anywhere. Standardize onboarding and showcase capabilities without disrupting operations.',
+    features: ['360° Interactive Tours', 'Live Guided Walkthroughs', 'Digital Twin Previews', 'Cross-Platform Access'],
     image: 'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg',
-    href: '/industry/construction',
+    href: '/industry/factory-tour',
     color: 'from-yellow-500 to-amber-500'
   },
   {
-    icon: Wrench,
-    title: 'Oil & Gas',
-    description: 'Offshore platform training, equipment maintenance, safety procedures, and emergency drills',
-    features: ['Platform Training', 'Equipment Maintenance', 'Safety Procedures', 'Emergency Drills'],
-    image: 'https://images.pexels.com/photos/1081228/pexels-photo-1081228.jpeg',
-    href: '/industry/oil-gas',
-    color: 'from-indigo-500 to-blue-500'
-  },
-  {
-    icon: Users,
-    title: 'Corporate Training',
-    description: 'Leadership development, team building, communication skills, and soft skill enhancement',
-    features: ['Leadership Development', 'Team Building', 'Communication Skills', 'Soft Skills'],
-    image: 'https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg',
-    href: '/industry/corporate',
-    color: 'from-violet-500 to-purple-500'
-  },
-  {
     icon: Globe,
-    title: 'Tourism & Heritage',
-    description: 'Virtual tours, cultural experiences, historical recreations, and destination marketing',
-    features: ['Virtual Tours', 'Cultural Experiences', 'Historical Recreation', 'Destination Marketing'],
+    title: 'Cultural & Heritage VR Tours',
+    description: 'Preserve and promote heritage with photorealistic, immersive VR tours of monuments, museums, and archaeological sites, expanding access while safeguarding fragile locations.',
+    features: ['3D Site Reconstructions', 'Narrated Storylines', 'Web & VR Deployment', 'Digital Archiving'],
     image: 'https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg',
     href: '/industry/tourism',
     color: 'from-emerald-500 to-green-500'
+  },
+  {
+    icon: Smartphone,
+    title: 'Mobile AR Applications',
+    description: 'Deliver contextual, on-site assistance and high-impact product demos with mobile AR that blends marker-based and markerless tracking—no special hardware required.',
+    features: ['On-Site AR Guidance', 'AR Product Demos', 'Indoor/Outdoor Wayfinding', 'Real-time Analytics'],
+    image: 'https://images.pexels.com/photos/1081228/pexels-photo-1081228.jpeg',
+    href: '/industry/mobile-ar',
+    color: 'from-indigo-500 to-blue-500'
   }
 ]
 
