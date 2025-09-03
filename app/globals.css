@@ -175,6 +175,20 @@
 }
 
 @layer base {
+    html {
+    font-size: 14px; /* Default is 16px, this reduces scale by ~12.5% */
+  }
+    @media (min-width: 768px) {
+    html {
+      font-size: 15px; /* Reduce ~6.25% on medium screens */
+    }
+  }
+
+  @media (min-width: 1280px) {
+    html {
+      font-size: 16px; /* Keep it normal on large screens */
+    }
+  }
   * {
     @apply border-border;
   }
