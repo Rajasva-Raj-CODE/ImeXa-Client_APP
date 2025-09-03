@@ -105,7 +105,7 @@ const HeroSection = () => {
       <div className="relative z-20 text-center max-w-6xl mx-auto px-4">
         {/* Phase 1 */}
         <div className="mb-12">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 transform hover:scale-105 transition-all duration-300 text-glow">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 transform hover:scale-105 transition-all duration-300 text-glow">
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
               {typewriterText1}
               {currentPhase === 1 && !showSubtitle1 && (
@@ -128,7 +128,7 @@ const HeroSection = () => {
         {/* Phase 2 */}
         {currentPhase === 2 && (
           <div className="mb-12">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 transform hover:scale-105 transition-all duration-300 text-glow">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 transform hover:scale-105 transition-all duration-300 text-glow">
               <span className="bg-gradient-to-r from-accent via-primary to-secondary bg-clip-text text-transparent">
                 {typewriterText2}
                 {!showSubtitle2 && (
